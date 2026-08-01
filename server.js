@@ -5,13 +5,13 @@ import cors from 'cors';
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 // --- CONFIGURATION ---
-const API_KEY = "AIzaSyCYAu0des4EU3oChAidnI-W3dWsJkwrUEA"; // Paste your new, secret API key here
+const API_KEY = ""; // Paste your new, secret API key here
 const PORT = 3000;
 
 // --- INITIALIZE THE MODEL ---
 const genAI = new GoogleGenerativeAI(API_KEY);
 const model = genAI.getGenerativeModel({
-  model: "gemini-1.5-flash",
+  model: "gemini-flash-latest",
   systemInstruction: `
 You are a helpful assistant. Answer questions and provide information based on the user's input. Keep responses concise and relevant. If you don't know the answer, say "I don't know."
 Avoid unnecessary details and focus on the user's request.
